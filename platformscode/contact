@@ -1,0 +1,697 @@
+import {
+  DgaBreadcrumbs,
+  DgaButton,
+  DgaLink,
+  DgaHeaderActionBtn,
+  DgaNavHeader,
+  DgaNavHeaderActions,
+  DgaNavHeaderLink,
+  DgaNavHeaderLogos,
+  DgaNavHeaderMain,
+  DgaNavHeaderMenu,
+  DgaDivider,
+  DgaTextInput,
+  DgaDropdown,
+  DgaTextarea,
+  DgaFileUpload,
+  DgaIcon,
+  DgaFooter,
+} from "platformscode-new-react";
+import Feedback from "../Feedback";
+
+function Contact() {
+  return (
+    <>
+      <DgaNavHeader fullWidth="" divider="">
+        <DgaNavHeaderMain collapsed>
+          <DgaNavHeaderLogos
+            logoSrc="https://dga-nds-fbhtx.ondigitalocean.app/mobile-logo.svg"
+            //   govSrc="https://dga-nds-fbhtx.ondigitalocean.app/mobile-logo.svg"
+            logoLink="#"
+            govLink="#"
+          ></DgaNavHeaderLogos>
+          <DgaNavHeaderMenu>
+            <DgaNavHeaderLink
+              label="Item  1"
+              icon="arrow-down-01"
+              subMenuBackground="Brand"
+              subMenuFullWidth=""
+            >
+              {" "}
+            </DgaNavHeaderLink>
+            <DgaNavHeaderLink
+              label="Item  2"
+              icon="arrow-down-01"
+              subMenuBackground="Brand"
+              subMenuFullWidth=""
+            >
+              {" "}
+            </DgaNavHeaderLink>
+            <DgaNavHeaderLink
+              label="Item  3"
+              icon="arrow-down-01"
+              subMenuBackground="Brand"
+              subMenuFullWidth=""
+            >
+              {" "}
+            </DgaNavHeaderLink>
+            <DgaNavHeaderLink
+              label="Item  4"
+              icon="arrow-down-01"
+              subMenuBackground="Brand"
+              subMenuFullWidth=""
+            >
+              {" "}
+            </DgaNavHeaderLink>
+            <DgaNavHeaderLink
+              label="Item  5"
+              icon="arrow-down-01"
+              subMenuBackground="Brand"
+              subMenuFullWidth=""
+            >
+              {" "}
+            </DgaNavHeaderLink>
+            <DgaNavHeaderLink
+              label="Item  6"
+              icon="arrow-down-01"
+              subMenuBackground="Brand"
+              subMenuFullWidth=""
+            >
+              {" "}
+            </DgaNavHeaderLink>
+            <DgaNavHeaderLink
+              label="Item  7"
+              icon="arrow-down-01"
+              subMenuBackground="Brand"
+              subMenuFullWidth=""
+            >
+              {" "}
+            </DgaNavHeaderLink>
+          </DgaNavHeaderMenu>
+        </DgaNavHeaderMain>
+        <DgaNavHeaderActions>
+          <DgaHeaderActionBtn
+            label="Search"
+            icon="search-01"
+          ></DgaHeaderActionBtn>
+          <DgaHeaderActionBtn
+            label="عربي"
+            icon="translation"
+          ></DgaHeaderActionBtn>
+          <DgaHeaderActionBtn label="Login" icon="user"></DgaHeaderActionBtn>
+        </DgaNavHeaderActions>
+      </DgaNavHeader>
+      <div className="py-[calc(var(--spacing-5xl,40px))] lg:py-[calc(var(--spacing-8xl,80px))] !pb-0">
+        <div className="lg:px-[var(--spacing-8xl,80px)] px-[var(--spacing-xl,16px)] mb-[40px]">
+          <div className="grid grid-cols-12 gap-[32px] items-start ">
+            <div className="left xl:col-span-7 col-span-12">
+              <DgaBreadcrumbs
+                items={[
+                  {
+                    path: "#",
+                    label: "Link",
+                    disabled: false,
+                  },
+                  {
+                    path: "#",
+                    label: "Link",
+                    disabled: true,
+                  },
+                ]}
+              />
+              <section className="mt-[24px]">
+                <div className="head  mb-[16px]">
+                  <h1 className="text-[var(--text-default,#161616)] text-[30px] font-[700] leading-[38px]">
+                    Contact us
+                  </h1>
+                </div>
+                <p className="text-[var(--text-default,#161616)] text-[16px] font-[400] leading-[24px]  mb-[24px]">
+                  Service description example To buy a plot to build your house,
+                  this requires documenting the sale and purchase process in the
+                  notarial offices or notary services to register the property
+                  in your name.
+                </p>
+              </section>
+              <div>
+                <section className="form grid  grid-cols-12 gap-[24px]">
+                  <div className="item col-span-12 xl:col-span-6">
+                    <label className="flex items-start gap-[4px] mb-[8px]">
+                      <span className="text-[14px] font-[600] leading-[20px] text-[var(--field-border-error,#B42318)] ">
+                        *
+                      </span>{" "}
+                      <p className="text-[14px] font-[600] leading-[20px] text-[var(--field-text-label,#161616)]">
+                        First Name
+                      </p>
+                    </label>
+                    <DgaTextInput
+                      name="First Name"
+                      placeholder="Type your first name"
+                      size="lg"
+                      type="text"
+                      value=""
+                      variant="darker"
+                    />
+                  </div>
+                  <div className="item col-span-12 xl:col-span-6">
+                    <label className="flex items-start gap-[4px] mb-[8px]">
+                      <span className="text-[14px] font-[600] leading-[20px] text-[var(--field-border-error,#B42318)] ">
+                        *
+                      </span>{" "}
+                      <p className="text-[14px] font-[600] leading-[20px] text-[var(--field-text-label,#161616)]">
+                        Last Name
+                      </p>
+                    </label>
+                    <DgaTextInput
+                      name="First Name"
+                      placeholder="Type your last name "
+                      size="lg"
+                      type="text"
+                      value=""
+                      variant="darker"
+                    />
+                  </div>
+                  <div className="item col-span-12 xl:col-span-6">
+                    <label className="flex items-start gap-[4px] mb-[8px]">
+                      <span className="text-[14px] font-[600] leading-[20px] text-[var(--field-border-error,#B42318)] ">
+                        *
+                      </span>{" "}
+                      <p className="text-[14px] font-[600] leading-[20px] text-[var(--field-text-label,#161616)]">
+                        Email
+                      </p>
+                    </label>
+                    <DgaTextInput
+                      name="email"
+                      placeholder="Type your email"
+                      size="lg"
+                      type="text"
+                      value=""
+                      variant="darker"
+                    />
+                  </div>
+                  <div className="item col-span-12 xl:col-span-6 phone">
+                    <label className="flex items-start gap-[4px] mb-[8px]">
+                      <span className="text-[14px] font-[600] leading-[20px] text-[var(--field-border-error,#B42318)] ">
+                        *
+                      </span>{" "}
+                      <p className="text-[14px] font-[600] leading-[20px] text-[var(--field-text-label,#161616)]">
+                        Phone
+                      </p>
+                    </label>
+                    <div className="flex items-center ">
+                      <div className="w-[20%]">
+                        <DgaDropdown
+                          extraClass=""
+                          getSelectedOptions={function Qa() {}}
+                          options={[
+                            {
+                              name: "+966",
+                              selected: true,
+                              value: "966",
+                            },
+                            {
+                              name: "+976",
+                              selected: false,
+                              value: "976",
+                            },
+                          ]}
+                          placeholder="+966"
+                          size="lg"
+                          variant="darker"
+                        />
+                      </div>
+                      <div className="flex-1">
+                        <DgaTextInput
+                          name="Phone"
+                          placeholder="00 000 0000"
+                          size="lg"
+                          type="text"
+                          value=""
+                          variant="darker"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="item col-span-12 xl:col-span-6">
+                    <label className="flex items-start gap-[4px] mb-[8px]">
+                      <p className="text-[14px] font-[600] leading-[20px] text-[var(--field-text-label,#161616)]">
+                        Subject
+                      </p>
+                    </label>
+                    <DgaTextInput
+                      name="Subject"
+                      placeholder="Type your Subject"
+                      size="lg"
+                      type="text"
+                      value=""
+                      variant="darker"
+                    />
+                  </div>
+                  <div className="item col-span-12 xl:col-span-6">
+                    <label className="flex items-start gap-[4px] mb-[8px]">
+                      <p className="text-[14px] font-[600] leading-[20px] text-[var(--field-text-label,#161616)]">
+                        Category
+                      </p>
+                    </label>
+                    <DgaTextInput
+                      name="Category"
+                      placeholder="Suggestion"
+                      size="lg"
+                      type="text"
+                      value=""
+                      variant="darker"
+                    />
+                  </div>
+                  <div className="item col-span-12 xl:col-span-6">
+                    <label className="flex items-start gap-[4px] mb-[8px]">
+                      <p className="text-[14px] font-[600] leading-[20px] text-[var(--field-text-label,#161616)]">
+                        How Can We Help?
+                      </p>
+                    </label>
+                    <DgaTextarea
+                      name="textarea"
+                      placeholder="Placeholder Text"
+                      resize
+                      rows={4}
+                      scrollbar
+                      value=""
+                      variant="default"
+                    />
+                  </div>
+                  <div className="item col-span-12 xl:col-span-6">
+                    <label className="flex items-start gap-[4px] mb-[8px]">
+                      <p className="text-[14px] font-[600] leading-[20px] text-[var(--field-text-label,#161616)]">
+                        Upload files
+                      </p>
+                    </label>
+
+                    <DgaFileUpload
+                      accept=""
+                      actionName="Browse Files"
+                      emitDeleteFile={function Qa() {}}
+                      fileTypesText="Supported formats: .pdf"
+                      getUploadedFile={function Qa() {}}
+                      multiple
+                      onChange={function Qa() {}}
+                      title="Drag and drop files here to upload"
+                      uploadFileOverSize={function Qa() {}}
+                    />
+                  </div>
+                </section>
+                <DgaButton
+                  label="Request premit "
+                  size="lg"
+                  variant="primary-brand"
+                />
+              </div>
+            </div>
+            <aside className="xl:col-span-5 col-span-12 border border-[var(--border-background-neutral,#D2D6DB)] rounded-[16px] bg-white p-[var(--spacing-5xl,40px)]">
+              <div className="space-y-[16px] mb-[16px]">
+                <h3 className="text-[var(--text-display,#1F2A37)] text-[18px] font-[700] leading-[28px]">
+                  Contact Amer
+                </h3>
+                <div className="moreLink space-y-[var(--spacing-xl,16px)] ">
+                  {[
+                    {
+                      title: "Phone",
+                      desc: "9200343222",
+                      icon: (
+                        <DgaIcon
+                          color="#1B8354"
+                          icon="call"
+                          size={24}
+                          type="sharp"
+                          variant="stroke"
+                        />
+                      ),
+                      descIcon: (
+                        <DgaIcon
+                          color="#1B8354"
+                          icon="copy-01"
+                          size={24}
+                          type="rounded"
+                          variant="stroke"
+                        />
+                      ),
+                    },
+                    {
+                      title: "SMS",
+                      desc: "199099",
+                      icon: (
+                        <DgaIcon
+                          color="#1B8354"
+                          icon="message-02"
+                          size={24}
+                          type="sharp"
+                          variant="stroke"
+                        />
+                      ),
+                      descIcon: (
+                        <DgaIcon
+                          color="#1B8354"
+                          icon="copy-01"
+                          size={24}
+                          type="rounded"
+                          variant="stroke"
+                        />
+                      ),
+                    },
+                    {
+                      title: "Email",
+                      desc: "help@company.sa",
+                      icon: (
+                        <DgaIcon
+                          color="#1B8354"
+                          icon="mail-01"
+                          size={24}
+                          type="sharp"
+                          variant="stroke"
+                        />
+                      ),
+                      descIcon: (
+                        <DgaIcon
+                          color="#1B8354"
+                          icon="copy-01"
+                          size={24}
+                          type="rounded"
+                          variant="stroke"
+                        />
+                      ),
+                    },
+                    {
+                      title: "FAX",
+                      desc: "00966-11-434-6654",
+                      icon: (
+                        <DgaIcon
+                          color="#1B8354"
+                          icon="mail-01"
+                          size={24}
+                          type="sharp"
+                          variant="stroke"
+                        />
+                      ),
+                      descIcon: (
+                        <DgaIcon
+                          color="#1B8354"
+                          icon="copy-01"
+                          size={24}
+                          type="rounded"
+                          variant="stroke"
+                        />
+                      ),
+                    },
+                    {
+                      title: "Location",
+                      desc: "Riyadh",
+                      icon: (
+                        <DgaIcon
+                          color="#1B8354"
+                          icon="location-01"
+                          size={24}
+                          type="sharp"
+                          variant="stroke"
+                        />
+                      ),
+                      descIcon: (
+                        <DgaIcon
+                          color="#1B8354"
+                          icon="link-04"
+                          size={24}
+                          type="rounded"
+                          variant="stroke"
+                        />
+                      ),
+                    },
+                  ].map((i) => {
+                    return (
+                      <div
+                        key={i.toString()}
+                        className="item flex items-start gap-[8px]"
+                      >
+                        <div className="icon py-[2px]">{i.icon}</div>
+                        <div className="content space-y-[4px]">
+                          <h3 className="text-[var(--text-display,#1F2A37)] text-[16px] font-[700] leading-[24px] p-0 m-0">
+                            {i.title}
+                          </h3>
+                          <a
+                            href=""
+                            className="text-[var(--link-primary,#1B8354)] text-[16px] font-[400] leading-[24px] p-0 m-0 flex items-center gap-[8px]"
+                          >
+                            {i.desc}
+                            {i.descIcon}
+                          </a>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+              <div className="Follow space-y-[8px]">
+                <h3 className="text-[var(--text-display,#1F2A37)] text-[18px] font-[700] leading-[28px]">
+                  Follow us
+                </h3>
+                <div className="content flex items-center gap-[8px]">
+                  <DgaButton
+                    iconOnly
+                    iconProps={{
+                      color: "black",
+                      size: 24,
+                      variant: "stroke",
+                    }}
+                    iconType="new-twitter"
+                    label="Button"
+                    size="md"
+                    variant="transparent"
+                  />
+                  <DgaButton
+                    iconOnly
+                    iconProps={{
+                      color: "black",
+                      size: 24,
+                      variant: "stroke",
+                    }}
+                    iconType="linkedin-02"
+                    label="Button"
+                    size="md"
+                    variant="transparent"
+                  />
+                  <DgaButton
+                    iconOnly
+                    iconProps={{
+                      color: "black",
+                      size: 24,
+                      variant: "stroke",
+                    }}
+                    iconType="instagram"
+                    label="Button"
+                    size="md"
+                    variant="transparent"
+                  />
+                </div>
+              </div>
+
+              <div className="py-[var(--spacing-3xl,24px)] ">
+                <hr />
+              </div>
+              <div className="space-y-[16px] mb-[16px]">
+                <h3 className="text-[var(--text-display,#1F2A37)] text-[18px] font-[700] leading-[28px]">
+                  Emergency contacts
+                </h3>
+                <div className="moreLink space-y-[var(--spacing-xl,16px)] ">
+                  {[
+                    {
+                      title: "Civil defence",
+                      desc: "988",
+                      icon: (
+                        <DgaIcon
+                          color="#1B8354"
+                          icon="copy-01"
+                          size={24}
+                          type="rounded"
+                          variant="stroke"
+                        />
+                      ),
+                    },
+                    {
+                      title: "Police",
+                      desc: "999",
+                      icon: (
+                        <DgaIcon
+                          color="#1B8354"
+                          icon="copy-01"
+                          size={24}
+                          type="rounded"
+                          variant="stroke"
+                        />
+                      ),
+                    },
+                    {
+                      title: "Ambulance",
+                      desc: "999",
+                      icon: (
+                        <DgaIcon
+                          color="#1B8354"
+                          icon="copy-01"
+                          size={24}
+                          type="rounded"
+                          variant="stroke"
+                        />
+                      ),
+                    },
+                  ].map((i) => {
+                    return (
+                      <div
+                        key={i.toString()}
+                        className="item flex flex-col items-start gap-[16px]"
+                      >
+                        <div className="content space-y-[4px] flex items-center gap-[8px]">
+                          <h3 className="text-[var(--text-display,#1F2A37)] text-[16px] font-[700] leading-[24px] p-0 m-0">
+                            {i.title}
+                          </h3>
+                          <a
+                            href=""
+                            className="text-[var(--link-primary,#1B8354)] text-[16px] font-[400] leading-[24px] p-0 m-0 flex items-center gap-[8px]"
+                          >
+                            {i.desc}
+                            {i.icon}
+                          </a>
+                        </div>
+                      </div>
+                    );
+                  })}
+                  <div className="!mt-[16px]">
+                    <DgaLink
+                      external
+                      label="View more"
+                      size="md"
+                      target="_blank"
+                      url="d "
+                      variant="brand"
+                    />
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+        <section
+          className=" lg:px-[var(--spacing-8xl,80px)] px-[var(--spacing-xl,16px)]"
+          key={"service"}
+        >
+          <p className="py-[var(--spacing-xl,16px)] text-end text-[var(--text-default,#161616)] text-[14px] font-[400] leading-[20px]">
+            Last Modified Date: 04/12/2020 - 4:13 PM Saudi Arabia Time
+          </p>
+        </section>
+        <DgaDivider color="primary" />
+
+        <Feedback />
+      </div>
+      <DgaFooter
+        background="DarkGreen"
+        NavLinks={true}
+        groupLinks={[
+          {
+            title: "Overview",
+            links: [
+              { name: "About [name of the portal]", target: "" },
+              { name: "Privacy and terms of use", target: "" },
+              { name: "How to use [name of the portal]", target: "" },
+              { name: "News and events", target: "" },
+              { name: "Service level agreement statistics", target: "" },
+            ],
+          },
+          {
+            title: "Important links",
+            links: [
+              { name: "National service portal", target: "" },
+              { name: "Open government data", target: "" },
+              {
+                name: "National strategy for data & Artificial intelligence",
+                target: "",
+              },
+              { name: "Open data portal", target: "" },
+              { name: "E-Participation portal", target: "" },
+            ],
+          },
+          {
+            title: "Contact & support",
+            links: [
+              { name: "Customer hub", target: "" },
+              { name: "Contact us", target: "" },
+              { name: "Engage with Us", target: "" },
+              { name: "Submit complaint", target: "" },
+              { name: "Report corruption", target: "" },
+            ],
+          },
+        ]}
+        socialMediaTitle="Social Media"
+        accessibilityTitle="accessibility Tools"
+        socialMediaLinks={[
+          {
+            title: "any",
+            target: "",
+            // icon: <DgaIcon icon="linkedin-02" variant="stroke" type="rounded" />,
+          },
+          {
+            title: "any",
+            target: "",
+            // icon: <ArrowRight02Icon />,
+          },
+          {
+            title: "any",
+            target: "",
+            // icon: <ArrowRight02Icon />,
+          },
+          {
+            title: "any",
+            target: "",
+            // icon: <ArrowRight02Icon />,
+          },
+        ]}
+        accessibilityLinks={[
+          {
+            title: "any",
+            target: "",
+            // icon: <ArrowRight02Icon />,
+          },
+          {
+            title: "any",
+            target: "",
+            // icon: <ArrowRight02Icon />,
+          },
+          {
+            title: "any",
+            target: "",
+            // icon: <ArrowRight02Icon />,
+          },
+        ]}
+        copyright="All Right Reserved For Digital Government Authority © 2024"
+        basicLinks={[
+          {
+            name: "Sitemap",
+            target: "#",
+          },
+          {
+            name: "RSS",
+            target: "#",
+          },
+          {
+            name: "Mobile App",
+            target: "#",
+          },
+        ]}
+        extraLinks={[
+          {
+            name: "Developed and Maintained by [insert the name of the entity]",
+            target: "#",
+          },
+        ]}
+        bottomImages={[
+          "https://dga-nds-fbhtx.ondigitalocean.app/mobile-logo.svg",
+          "https://dga-nds-fbhtx.ondigitalocean.app/mobile-logo.svg",
+        ]}
+      />
+    </>
+  );
+}
+
+export default Contact;
