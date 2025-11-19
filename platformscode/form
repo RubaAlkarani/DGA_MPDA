@@ -1,0 +1,377 @@
+import { MainComponentDescription } from "../../Components";
+
+import usePageFillData from "../../Hooks/usePageFillData";
+import { useEffect } from "react";
+import SectionsWrapper from "../../Components/SectionsWrapper";
+import { Translation } from "../../utils/translation";
+import i18n from "../../locale";
+import useNavigationsButtons from "../../Hooks/useNavigationsButtons";
+import useBreadcrumbs from "../../Hooks/useBreadcrumbs";
+import TemplateExploreCard from "../../Components/TemplateExploreCard";
+import Stack from "../../Components/Stack";
+import Component from "../../Components/Component";
+import i18next from "../../locale";
+import { guid } from "../../utils/guid";
+import CollaborationSection from "../../Components/CollaborationSection";
+
+const FormPage = () => {
+  const { setTableOfContentList, setSubTitle, setTitle } = usePageFillData();
+  useNavigationsButtons();
+  useBreadcrumbs();
+  useEffect(() => {
+    setSubTitle(Translation("on_this_page"));
+    setTitle(Translation("templatesObj.form.title"));
+    setTableOfContentList([
+      {
+        Name: Translation("templateDesignOverview"),
+        Target: "template-design-overview",
+        Children: [{ Name: Translation("Guidelines"), Target: "guidelines" }],
+      },
+    ]);
+  }, [i18n.language]);
+
+  return (
+    <SectionsWrapper className="pt-[80px]">
+      <div className="md:max-w-[730px] md:m-auto overflow-hidden max-md:px-0 ">
+        <div className="flex flex-col gap-[80px] mb-[32px] w-full">
+          <MainComponentDescription
+            title="templatesObj.form.title"
+            description_1="templatesObj.form.desc"
+          />
+
+          <TemplateExploreCard
+            title="templatesObj.form.explore_card.title"
+            desc="templatesObj.form.explore_card.desc"
+            figmaUrl="https://www.figma.com/community/file/1428726490797221102/form-template-platforms-code"
+            link="/templates/form"
+            sourceCode="form.zip"
+          />
+
+          <Stack id="template-design-overview" gap={"24px"}>
+            {[
+              {
+                is: "title",
+                children: "templatesObj.form.section1.title",
+                variant: "h2",
+                classes: "display-sm-bold",
+              },
+              {
+                is: "image",
+                imagePath: `/templates/form/contactUs-template-preview-${i18next.language}.svg`,
+                imageAlt: Translation("templatesObj.form.section1.title"),
+              },
+            ].map((item) => (
+              <Component key={guid()} {...item}></Component>
+            ))}
+          </Stack>
+
+          <Stack id="guidelines" gap={"24px"}>
+            {[
+              {
+                id: "guidelines",
+                is: "title",
+                children: "templatesObj.form.section2.title",
+                variant: "h2",
+                classes: "display-sm-bold",
+              },
+              {
+                is: "paragraph",
+                children: "templatesObj.form.section2.desc",
+                variant: "p",
+                classes: "text-md-regular",
+              },
+              {
+                is: "title",
+                children: "templatesObj.form.section3.title",
+                variant: "h3",
+                classes: "display-xs-semibold",
+              },
+
+              {
+                is: "list",
+                itemDirection: "row",
+                items: [
+                  {
+                    title: "templatesObj.form.section3.list.0.title",
+                    desc: "templatesObj.form.section3.list.0.desc",
+                    headExtraClass:
+                      "text-[var(--text-primary-paragraph,#384250)]",
+                  },
+                  {
+                    title: "templatesObj.form.section3.list.1.title",
+                    desc: "templatesObj.form.section3.list.1.desc",
+                    headExtraClass:
+                      "text-[var(--text-primary-paragraph,#384250)]",
+                  },
+                ],
+                listStyle: "none",
+                classes: "!ml-0 space-y-4",
+              },
+              {
+                is: "image",
+                imagePath: `/templates/form/search-behavior-1-${i18next.language}.svg`,
+                imageAlt: Translation("templatesObj.form.section3.title"),
+              },
+
+              {
+                is: "title",
+                children: "templatesObj.form.section4.title",
+                variant: "h3",
+                classes: "display-xs-semibold",
+              },
+
+              {
+                is: "list",
+                itemDirection: "row",
+                items: [
+                  {
+                    title: "templatesObj.form.section4.list.0.title",
+                    desc: "templatesObj.form.section4.list.0.desc",
+                    headExtraClass:
+                      "text-[var(--text-primary-paragraph,#384250)]",
+                  },
+                  {
+                    title: "templatesObj.form.section4.list.1.title",
+                    desc: "templatesObj.form.section4.list.1.desc",
+                    headExtraClass:
+                      "text-[var(--text-primary-paragraph,#384250)]",
+                  },
+                ],
+                listStyle: "none",
+                classes: "!ml-0 space-y-4",
+              },
+
+              {
+                is: "image",
+                imagePath: `/templates/form/nav-header-1-${i18next.language}.svg`,
+                imageAlt: Translation("templatesObj.form.section4.title"),
+              },
+
+              // Second Nav Header
+
+              {
+                is: "title",
+                children: "templatesObj.form.section5.title",
+                variant: "h3",
+                classes: "display-xs-semibold",
+              },
+
+              {
+                is: "list",
+                itemDirection: "row",
+                items: [
+                  {
+                    title: "templatesObj.form.section5.list.0.title",
+                    desc: "templatesObj.form.section5.list.0.desc",
+                    headExtraClass:
+                      "text-[var(--text-primary-paragraph,#384250)]",
+                  },
+                  {
+                    title: "templatesObj.form.section5.list.1.title",
+                    desc: "templatesObj.form.section5.list.1.desc",
+                    headExtraClass:
+                      "text-[var(--text-primary-paragraph,#384250)]",
+                  },
+                ],
+                listStyle: "none",
+                classes: "!ml-0 space-y-4",
+              },
+
+              {
+                is: "image",
+                imagePath: `/templates/form/second-nav-header-1-${i18next.language}.svg`,
+                imageAlt: Translation("templatesObj.form.section5.title"),
+              },
+
+              // Required Information
+              {
+                is: "title",
+                children: "templatesObj.form.section6.title",
+                variant: "h3",
+                classes: "display-xs-semibold",
+              },
+
+              {
+                is: "list",
+                itemDirection: "row",
+                items: [
+                  {
+                    title: "templatesObj.form.section6.list.0.title",
+                    desc: "templatesObj.form.section6.list.0.desc",
+                    headExtraClass:
+                      "text-[var(--text-primary-paragraph,#384250)]",
+                  },
+                ],
+                listStyle: "none",
+                classes: "!ml-0",
+              },
+              {
+                is: "image",
+                imagePath: `/templates/form/required-information-1-${i18next.language}.svg`,
+                imageAlt: Translation("templatesObj.form.section6.title"),
+              },
+
+              // Swap the screens
+              {
+                is: "title",
+                children: "templatesObj.form.section7.title",
+                variant: "h3",
+                classes: "display-xs-semibold",
+              },
+              {
+                is: "title",
+                children: "templatesObj.form.section7.subtitle",
+                variant: "h4",
+                classes:
+                  "text-md-regular text-[var(--text-primary-paragraph)] font-[700]",
+              },
+
+              {
+                is: "list",
+                itemDirection: "row",
+                items: [
+                  {
+                    desc: "templatesObj.form.section7.list.0.desc",
+                    headExtraClass:
+                      "text-[var(--text-primary-paragraph,#384250)]",
+                  },
+                  {
+                    desc: "templatesObj.form.section7.list.1.desc",
+                    headExtraClass:
+                      "text-[var(--text-primary-paragraph,#384250)]",
+                  },
+                ],
+                // isSimpleText: true,
+                // listStyle: "list-decimal",
+                classes: "list-decimal [&_li]:list-decimal ",
+              },
+
+              {
+                is: "hint",
+                desc: "templatesObj.form.section7.hint",
+              },
+
+              {
+                is: "image",
+                imagePath: `/templates/form/swap-the-placeholder-1-${i18next.language}.svg`,
+                imageAlt: Translation("templatesObj.form.section7.title"),
+              },
+              //Progress Indicator
+              {
+                is: "title",
+                children: "templatesObj.form.section8.title",
+                variant: "h3",
+                classes: "display-xs-semibold",
+              },
+              {
+                is: "list",
+                itemDirection: "row",
+                items: [
+                  {
+                    title: "templatesObj.form.section8.list.0.title",
+                    desc: "templatesObj.form.section8.list.0.desc",
+                    headExtraClass:
+                      "text-[var(--text-primary-paragraph,#384250)]",
+                  },
+                  {
+                    title: "templatesObj.form.section8.list.1.title",
+                    desc: "templatesObj.form.section8.list.1.desc",
+                    headExtraClass:
+                      "text-[var(--text-primary-paragraph,#384250)]",
+                    listClass: "last-of-type:mt-5",
+                  },
+                ],
+                listStyle: "none",
+                classes: "!ml-0 last:!mt-2",
+              },
+              {
+                is: "image",
+                imagePath: `/templates/form/progress-1-${i18next.language}.svg`,
+                imageAlt: Translation("templatesObj.form.section8.title"),
+              },
+
+              // Feedback
+
+              {
+                is: "title",
+                children: "templatesObj.form.section9.title",
+                variant: "h3",
+                classes: "display-xs-semibold",
+              },
+
+              {
+                is: "list",
+                itemDirection: "row",
+                items: [
+                  {
+                    title: "templatesObj.form.section9.list.0.title",
+                    desc: "templatesObj.form.section9.list.0.desc",
+                    headExtraClass:
+                      "text-[var(--text-primary-paragraph,#384250)]",
+                  },
+                ],
+                listStyle: "none",
+                classes: "!ml-0",
+              },
+              {
+                is: "hint",
+                desc: "templatesObj.form.section9.hint",
+              },
+
+              {
+                is: "image",
+                imagePath: `/templates/form/feedback-1-${i18next.language}.svg`,
+                imageAlt: Translation("templatesObj.form.section9.title"),
+              },
+
+              //  Footer
+              {
+                is: "title",
+                children: "templatesObj.contactUs.Footer",
+                variant: "h3",
+                classes: "display-xs-semibold",
+              },
+
+              {
+                is: "list",
+                itemDirection: "row",
+                items: [
+                  {
+                    title: "templatesObj.form.section10.list.0.title",
+                    desc: "templatesObj.form.section10.list.0.desc",
+                    headExtraClass:
+                      "text-[var(--text-primary-paragraph,#384250)]",
+                  },
+                  {
+                    title: "templatesObj.form.section10.list.1.title",
+                    desc: "templatesObj.form.section10.list.1.desc",
+                    headExtraClass:
+                      "text-[var(--text-primary-paragraph,#384250)]",
+                  },
+                  {
+                    title: "templatesObj.form.section10.list.2.title",
+                    desc: "templatesObj.form.section10.list.2.desc",
+                    headExtraClass:
+                      "text-[var(--text-primary-paragraph,#384250)]",
+                  },
+                ],
+                listStyle: "none",
+                classes: "!ml-0 space-y-4",
+              },
+              {
+                is: "image",
+                imagePath: `/templates/form/footer-1-${i18next.language}.svg`,
+                imageAlt: Translation("templatesObj.contactUs.Footer"),
+              },
+            ].map((item) => (
+              <Component key={guid()} {...item}></Component>
+            ))}
+          </Stack>
+          <CollaborationSection />
+        </div>
+      </div>
+    </SectionsWrapper>
+  );
+};
+
+export default FormPage;
