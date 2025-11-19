@@ -1,0 +1,228 @@
+import { DgaBreadcrumbs, DgaCard, DgaDivider, DgaFooter, DgaHeaderActionBtn, DgaNavHeader, DgaNavHeaderActions, DgaNavHeaderLink, DgaNavHeaderLogos, DgaNavHeaderMain, DgaNavHeaderMenu } from "platformscode-new-react"
+import { guid } from "../../../utils/guid"
+import Feedback from "../Feedback"
+import '../../../../node_modules/platformscode-new-react/dist/style.css'
+
+const CustomerService: React.FC = () => {
+    return(
+    <>
+    <DgaNavHeader fullWidth divider>
+      <DgaNavHeaderMain collapsed>
+        <DgaNavHeaderLogos
+          logoSrc="https://dga-nds-fbhtx.ondigitalocean.app/mobile-logo.svg"
+        //   govSrc="https://dga-nds-fbhtx.ondigitalocean.app/mobile-logo.svg"
+          logoLink="#"
+          govLink="#"
+        ></DgaNavHeaderLogos>
+        <DgaNavHeaderMenu>
+          <DgaNavHeaderLink label="Item  1" icon="arrow-down-01" subMenuBackground="Brand" subMenuFullWidth=""> </DgaNavHeaderLink>
+          <DgaNavHeaderLink label="Item  2" icon="arrow-down-01" subMenuBackground="Brand" subMenuFullWidth=""> </DgaNavHeaderLink>
+          <DgaNavHeaderLink label="Item  3" icon="arrow-down-01" subMenuBackground="Brand" subMenuFullWidth=""> </DgaNavHeaderLink>
+          <DgaNavHeaderLink label="Item  4" icon="arrow-down-01" subMenuBackground="Brand" subMenuFullWidth=""> </DgaNavHeaderLink>
+          <DgaNavHeaderLink label="Item  5" icon="arrow-down-01" subMenuBackground="Brand" subMenuFullWidth=""> </DgaNavHeaderLink>
+          <DgaNavHeaderLink label="Item  6" icon="arrow-down-01" subMenuBackground="Brand" subMenuFullWidth=""> </DgaNavHeaderLink>
+          <DgaNavHeaderLink label="Item  7" icon="arrow-down-01" subMenuBackground="Brand" subMenuFullWidth=""> </DgaNavHeaderLink>
+        </DgaNavHeaderMenu>
+      </DgaNavHeaderMain>
+      <DgaNavHeaderActions>
+        <DgaHeaderActionBtn label="Search" icon="search-01"></DgaHeaderActionBtn> 
+        <DgaHeaderActionBtn label="عربي" icon="translation"></DgaHeaderActionBtn> 
+        <DgaHeaderActionBtn label="Login" icon="user"></DgaHeaderActionBtn>
+      </DgaNavHeaderActions>
+    </DgaNavHeader> 
+
+    <div className="pt-[112px] px-[16px] md:px-[80px]">
+        <DgaBreadcrumbs items={
+            [
+                {
+                    path: '/templates',
+                    label: 'Link',
+                    disabled: false,
+                },
+                {
+                    path: '/templates/customer-service',
+                    label: 'Link',
+                    disabled: true,
+                }
+            ]
+        }/>
+
+        <section className="mt-[24px]"> 
+            <h1 className="display-sm-bold text-[#161616] mb-4">Help & Support</h1>
+            <p className="text-md-regular text-[#161616] mb-8">We work continuously to make your experience through government services easier, see what support channel suits better your necessities.</p>
+        
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                 {
+                    [
+                        {
+                            title:"Contact us",
+                            description:"Here you can include a description in four lines. Here you can include a description in four lines. Here you can include a description.",
+                            primaryActionLabel:"action",
+                            showSecondaryAction: false,
+                            // customComponent: ()
+                        },
+                        {
+                            title:"FAQs",
+                            description:"Here you can include a description in four lines. Here you can include a description in four lines. Here you can include a description.",
+                            primaryActionLabel:"action",
+                            showSecondaryAction: false
+                        },
+                        {
+                            title:"Contact us",
+                            description:"Here you can include a description in four lines. Here you can include a description in four lines. Here you can include a description.",
+                            primaryActionLabel:"action",
+                            showSecondaryAction: false
+                        },
+                        {
+                            title:"Contact us",
+                            description:"Here you can include a description in four lines. Here you can include a description in four lines. Here you can include a description.",
+                            primaryActionLabel:"action",
+                            showSecondaryAction: false
+                        },
+                        {
+                            title:"FAQs",
+                            description:"Here you can include a description in four lines. Here you can include a description in four lines. Here you can include a description.",
+                            primaryActionLabel:"action",
+                            showSecondaryAction: false
+
+                        },
+                        {
+                            title:"Contact us",
+                            description:"Here you can include a description in four lines. Here you can include a description in four lines. Here you can include a description.",
+                            primaryActionLabel:"action",
+                            showSecondaryAction: false
+                        },
+                    ].map(({title , description , primaryActionLabel , showSecondaryAction}) =>  <DgaCard 
+                    key={guid()} 
+                    cardTitle={title}
+                    description={description}
+                    primaryActionLabel={primaryActionLabel}
+                    showPrimaryAction={showSecondaryAction}
+                    // featuredIcon={<DgaIcon icon="mail-02" size={24} variant="stroke" type="rounded" color="#1B8354" />}
+                />)
+                } 
+
+{/* <DgaCard 
+                    cardTitle={"Contact us"}
+                    // featuredIcon={<DgaIcon icon="mail-02" size={24} variant="stroke" type="rounded" color="#1B8354" />}
+                /> */}
+               
+
+                
+
+            </div>
+
+            <p className="text-sm-regular text-right text-[#161616] py-[16px] mt-[40px]">Last Modified Date: 04/12/2020 - 4:13 PM Saudi Arabia Time</p>
+        </section>
+
+
+    </div>
+        <DgaDivider color="primary"/>
+        
+        <Feedback />
+
+    <DgaFooter
+    background="DarkGreen"
+    NavLinks={true}
+    groupLinks={[
+      {
+        title: 'Overview',
+        links: [
+          { name: 'About [name of the portal]', target: '' },
+          { name: 'Privacy and terms of use', target: '' },
+          { name: 'How to use [name of the portal]', target: '' },
+          { name: 'News and events', target: '' },
+          { name: 'Service level agreement statistics', target: '' },
+        ],
+      },
+      {
+        title: 'Important links',
+        links: [
+          { name: 'National service portal', target: '' },
+          { name: 'Open government data', target: '' },
+          { name: 'National strategy for data & Artificial intelligence', target: '' },
+          { name: 'Open data portal', target: '' },
+          { name: 'E-Participation portal', target: '' },
+        ],
+      },
+      {
+        title: 'Contact & support',
+        links: [
+          { name: 'Customer hub', target: '' },
+          { name: 'Contact us', target: '' },
+          { name: 'Engage with Us', target: '' },
+          { name: 'Submit complaint', target: '' },
+          { name: 'Report corruption', target: '' },
+        ],
+      },
+    ]}
+    socialMediaTitle="Social Media"
+    accessibilityTitle="accessibility Tools"
+    socialMediaLinks={[
+      {
+        title: 'any',
+        target: '',
+        // icon: <DgaIcon icon="linkedin-02" variant="stroke" type="rounded" />,
+      },
+      {
+        title: 'any',
+        target: '',
+        // icon: <ArrowRight02Icon />,
+      },
+      {
+        title: 'any',
+        target: '',
+        // icon: <ArrowRight02Icon />,
+      },
+      {
+        title: 'any',
+        target: '',
+        // icon: <ArrowRight02Icon />,
+      },
+    ]}
+    accessibilityLinks={[
+      {
+        title: 'any',
+        target: '',
+        // icon: <ArrowRight02Icon />,
+      },
+      {
+        title: 'any',
+        target: '',
+        // icon: <ArrowRight02Icon />,
+      },
+      {
+        title: 'any',
+        target: '',
+        // icon: <ArrowRight02Icon />,
+      },
+    ]}
+    copyright="All Right Reserved For Digital Government Authority © 2024"
+    basicLinks={[
+      {
+        name: 'Sitemap',
+        target: '#',
+      },
+      {
+        name: 'RSS',
+        target: '#',
+      },
+      {
+        name: 'Mobile App',
+        target: '#',
+      },
+    ]}
+    extraLinks={[
+      {
+        name: 'Developed and Maintained by [insert the name of the entity]',
+        target: '#',
+      },
+    ]}
+    bottomImages={['https://dga-nds-fbhtx.ondigitalocean.app/mobile-logo.svg', 'https://dga-nds-fbhtx.ondigitalocean.app/mobile-logo.svg']}
+  
+/>
+
+    </>)
+}
+
+export default CustomerService
