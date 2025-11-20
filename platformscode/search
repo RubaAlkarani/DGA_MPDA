@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>platforms code design system</title>
+    <meta name="title" content="كود المنصات - نظام التصميم الوطني الموحد" />
+    <meta
+      name="application-name"
+      content="كود المنصات - نظام التصميم الوطني الموحد"
+    />
+    <meta
+      name="description"
+      content="نظام التصميم الموحد للمملكة العربية السعودية (كود المنصات) لنمكن التجربة الرقمية الحكومية بلغة تصميم موحدة."
+    />
+    <meta
+      name="keywords"
+      content="Design System,Design,Gov.sa,تصميم,نظام التصميم الوطني,كود المنصات"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="bingbot" content="index, follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="msapplication-starturl" content="https://design.dga.gov.sa/" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta
+      property="og:title"
+      content="كود المنصات - نظام التصميم الوطني الموحد"
+    />
+    <meta
+      property="og:description"
+      content="نظام التصميم الموحد للمملكة العربية السعودية (كود المنصات) لنمكن التجربة الرقمية الحكومية بلغة تصميم موحدة."
+    />
+    <meta
+      property="og:image"
+      content="https://design.dga.gov.sa/og-image.jpeg"
+    />
+    <!-- content="https://design.dga.gov.sa/og-image.jpeg" -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ar_AR" />
+
+    <!-- comment for checking -->
+    <!-- Dynamic URL Setting -->
+
+    <!-- Twitter Card Meta Tags (Optional) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="كود المنصات - نظام التصميم الوطني الموحد"
+    />
+    <meta
+      name="twitter:description"
+      content="نظام التصميم الموحد للمملكة العربية السعودية (كود المنصات) لنمكن التجربة الرقمية الحكومية بلغة تصميم موحدة."
+    />
+    <meta
+      name="twitter:image"
+      content="https://design.dga.gov.sa/og-image.jpeg"
+    />
+
+    <!-- Content Security Policy -->
+    <!-- <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self' https://trusted-scripts.com; object-src 'none';"
+    /> -->
+    <!-- Prevent Clickjacking -->
+    <meta http-equiv="X-Frame-Options" content="deny" />
+    <!-- XSS Protection -->
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+    <!-- Referrer Policy Purpose: Controls how much referrer information is sent when a user clicks a link on your site. This can enhance privacy. -->
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <!-- Prevent MIME-type sniffing -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <!-- Enforce HTTPS -->
+    <meta
+      http-equiv="Strict-Transport-Security"
+      content="max-age=31536000; includeSubDomains"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preload" href="critical.css" as="style" />
+
+    <script defer src="non-critical.js"></script>
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS Feed"
+      href="/rss.xml"
+    />
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var ogUrlMetaTag = document.createElement("meta");
+        ogUrlMetaTag.setAttribute("property", "og:url");
+        ogUrlMetaTag.setAttribute("content", window.location.href);
+        document.head.appendChild(ogUrlMetaTag);
+      });
+    </script>
+    <script type="module" crossorigin src="/assets/index-DJGD8kea.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DznlQUps.css">
+  </head>
+  <body>
+    <div id="root"></div>
+
+  </body>
+</html>
